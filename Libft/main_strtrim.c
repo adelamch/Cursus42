@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   main_strtrim.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 20:44:17 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/28 13:17:52 by amolina-         ###   ########.fr       */
+/*   Created: 2021/03/09 20:55:23 by amolina-          #+#    #+#             */
+/*   Updated: 2021/03/09 21:38:20 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set);
+
+int		main()
 {
-	char			*cadena;
-	unsigned int	i;
-	size_t			j;
-
-	cadena = (char *)malloc((len + 1) * sizeof(char));
-	i = start;
-	j = 0;
-	while (s[i] != '\0' && j < len)
-	{
-		cadena[j] = s[i];
-		i++;
-		j++;
-	}
-	cadena[j] = '\0';
-	return (cadena);
+	char base[20] = "ahsemucadelaahsemuc";
+	char quitar[10] = "ahsemuc";
+	printf("%s\n", ft_strtrim(base, quitar));
+	return (0);
 }
