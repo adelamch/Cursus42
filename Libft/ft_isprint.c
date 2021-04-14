@@ -6,11 +6,11 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 19:46:08 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/16 19:53:09 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/05 13:53:29 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

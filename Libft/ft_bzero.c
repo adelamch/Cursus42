@@ -6,15 +6,15 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 18:36:00 by amolina-          #+#    #+#             */
-/*   Updated: 2021/01/24 18:50:58 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/07 00:49:09 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

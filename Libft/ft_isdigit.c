@@ -6,11 +6,11 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 14:29:26 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/16 19:56:23 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/05 13:52:42 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

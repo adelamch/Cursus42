@@ -6,49 +6,27 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 15:17:41 by amolina-          #+#    #+#             */
-/*   Updated: 2020/12/14 20:18:07 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/07 13:33:16 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
-{
-	unsigned int	len;
-	char			*c;
+#include "libft.h"
 
-	len = 0;
-	c = str;
-	while (*c != '\0')
-	{
-		c++;
-		len++;
-	}
-	return (len);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
+	while (dst[i] && i < dstsize)
+		i++;
 	j = 0;
-	k = ft_strlen(dest);
-	if (size == 0)
-		return (ft_strlen(src));
-	if (size <= k)
-		return (size + ft_strlen(src));
-	else
+	while (src[j] && (i + j + 1) < dstsize)
 	{
-		while (dest[i] != '\0')
-			i++;
-		while (src[j] != '\0' && j < size - k - 1)
-		{
-			dest[i] = src[j];
-			i++;
-			j++;
-		}
-		dest[i] = '\0';
-		return (k + ft_strlen(src));
+		dst[i + j] = src[j];
+		j++;
 	}
+	if (i < dstsize)
+		dst[i + j] = 0;
+	return (i + ft_strlen(src));
 }

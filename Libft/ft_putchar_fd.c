@@ -6,8 +6,13 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:46:26 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/16 20:46:32 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/03 20:48:49 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

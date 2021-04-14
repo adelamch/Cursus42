@@ -6,7 +6,17 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:48:47 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/16 20:48:52 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/07 13:58:00 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (lst && new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
+}

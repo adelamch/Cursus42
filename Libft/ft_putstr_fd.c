@@ -6,8 +6,19 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:47:02 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/16 20:47:13 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/09 01:29:17 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	while (*s != '\0')
+	{
+		write(fd, s, 1);
+		s++;
+	}
+}

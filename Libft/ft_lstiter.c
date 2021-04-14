@@ -6,7 +6,17 @@
 /*   By: amolina- <amolina-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:50:47 by amolina-          #+#    #+#             */
-/*   Updated: 2021/02/16 20:50:51 by amolina-         ###   ########.fr       */
+/*   Updated: 2021/04/07 13:55:08 by amolina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	while (lst != NULL)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+}
